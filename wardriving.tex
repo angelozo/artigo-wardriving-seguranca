@@ -140,6 +140,48 @@ Angelo Rodrigo Ribeiro da Silva\thanks{angelorodriigo.rs@gmail.com} Jaíne da Si
 \section*{Introdução}
 \addcontentsline{toc}{section}{Introdução}
 
+Segundo \cite[p. 67]{redes-tanenbaum} "Quase na mesma época em que surgir am os notebooks, muitas pessoas sonhavam com o dia em que entrariam em um escritório e magicamente seu notebook se conectaria à Internet.", e logicamente, veio logo após a necessidade de proteger essas redes através de criptografia e outras técnicas de segurança.
+
+E também, com a melhora de segurança das redes, surgiram pessoas interessadas em quebrar essas redes, seja por interesse financeiro, corporativo ou mesmo pelo triunfo de se atingir um objetivo utilizando técnicas de quebra, prática muito comum nas comunidades de hackers.
+
+\section{Wardriving}
+
+%Jonatas%
+
+\section{Protocolas de segurança em redes sem fio}
+
+\section{Análise de vulnerabilidade e tentativa de quebra de senhas}
+
+Buscando analisar a vulnerabilidade de redes wifi de estabelecimentos, fomos a um shopping em Sorocaba avaliar as redes através de wardriving e depois tentarmos quebrar redes.
+
+\subsection{Objetivos}
+
+O nosso objetivo é verificar se os grandes estabelecimentos se preocupam com segurança de redes, visto que milhares de usuários acessam a rede todos os dias.
+
+\subsection{Ferramentas utilizadas}
+
+\subsubsection{Kismet}
+
+Nós utilizamos o Kismet para realizar wardriving e capturar estátisticas e pacotes das redes wifi e salvar essas informações utilizando gps, para podermos analizar após.
+
+\subsubsection{Wireshark}
+
+Para as redes abertas, decidimos capturar os pacotes enviados e recebidos de toda a rede utilizando wireshark.
+
+\subsubsection{Aircrack}
+
+Para as redes fechadas, com a captura de pacotes, fizemos então handshake, e após, tentativas de quebra utilizando wordlists de 13.2 gb com 1.2 bilhão de senhas.
+
+\subsection{Resultados da análise de redes}
+
+\subsubsection{Captura de pacotes}
+
+Conseguimos capturar através do Kismet 37 redes sem fio válidas (com conexão), das quais 22 eram redes abertas que foram analisadas utilizando sniffing e 15 eram redes privadas das quais:
+
+\subsubsection{Cracking de senhas}
+
+\subsubsection{Sniffing}
+
 % Finaliza a parte no bookmark do PDF, para que se inicie o bookmark na raiz
 \bookmarksetup{startatroot}
 
