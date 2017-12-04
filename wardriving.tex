@@ -38,6 +38,11 @@
 % ---
 
 % ---
+%Caminho das imagens
+\graphicspath{ {images/} }
+% ---
+
+% ---
 % Configurações do pacote backref
 % Usado sem a opção hyperpageref de backref
 \renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
@@ -176,7 +181,19 @@ Para as redes fechadas, com a captura de pacotes, fizemos então handshake, e ap
 
 \subsubsection{Captura de pacotes}
 
-Conseguimos capturar através do Kismet 37 redes sem fio válidas (com conexão), das quais 22 eram redes abertas que foram analisadas utilizando sniffing e 15 eram redes privadas das quais:
+Conseguimos capturar através do Kismet 37 redes sem fio válidas (com conexão), das quais 22 eram redes abertas que foram analisadas utilizando sniffing e 15 eram redes privadas.
+
+\begin{figure}[H]
+	\centering
+	\caption{Gráfico das seguranças de redes sem fio utilizadas.}
+	\includegraphics[scale=0.7]{graficopie-seguranca-redes}
+\end{figure}
+
+Como podemos ver acima, a maior parte das redes wifi privadas utilizam a criptografia de rede WPA2-PSK, porém ainda temos redes que utizam protocolo WEP, que é muito inseguro e fácil de ser quebrado.
+
+
+
+
 
 \subsubsection{Cracking de senhas}
 
