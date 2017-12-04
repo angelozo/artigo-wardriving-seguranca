@@ -63,7 +63,7 @@
 % ---
 % Informações de dados para CAPA e FOLHA DE ROSTO
 % ---
-\titulo{Criptografia Simétrica D.E.S - Data Encryption Standard}
+\titulo{Análise de vulnerabilidade e segurança de redes sem fio comerciais}
 \autor{
 Angelo Rodrigo Ribeiro da Silva\thanks{angelorodriigo.rs@gmail.com} Jaíne da Silva Santos\thanks{jaine.ssilva1@gmail.com}
 \\Jonatas Rosa da Silva Bonventi\thanks{jonatasbvt@yahoo.com}
@@ -82,7 +82,7 @@ Angelo Rodrigo Ribeiro da Silva\thanks{angelorodriigo.rs@gmail.com} Jaíne da Si
      	%pagebackref=true,
 		pdftitle={\@title},
 		pdfauthor={\@author},
-    	pdfsubject={Análise de vulnerabilidade de redes wifi utilizando técnicas de WarDriving},
+    	pdfsubject={Análise de vulnerabilidade de redes utilizando técnicas de WarDriving},
 	    pdfcreator={LaTeX with abnTeX2},
 		pdfkeywords={wardriving}{Wifi}{segurança da informação}{ifsp},
 		colorlinks=true,       		% false: boxed links; true: colored links
@@ -93,7 +93,6 @@ Angelo Rodrigo Ribeiro da Silva\thanks{angelorodriigo.rs@gmail.com} Jaíne da Si
 		bookmarksdepth=4
 }
 \makeatother
-
 
 % compila o indice
 \makeindex
@@ -131,7 +130,9 @@ Angelo Rodrigo Ribeiro da Silva\thanks{angelorodriigo.rs@gmail.com} Jaíne da Si
 
 % resumo em português
 \begin{resumoumacoluna}
- Resumo de uma coluna.
+Com a crescente demanda de dispositivos móveis conectados à internet, como celulares, tablets e notebooks, o uso de redes sem fio tornou-se algo bastante presente em nosso dia-a-dia. Seja em ambientes corporativos ou domésticos, a popularização deu-se também pela facilidade e liberdade que a tecnologia wireless fornece, e recentemente invadiu outros dispositivos pelo fenômeno chamado Internet das Coisas (IoT), como eletrodomésticos, carros e roupas.\\
+
+Entretanto, a maioria dessas redes não é protegida de forma adequada, tornando-se constantemente “portas de entrada” para hackers sequestrarem informações de usuários ou sabotarem sistemas que gerarão grandes prejuízos.\\
 
  \vspace{\onelineskip}
 
@@ -154,9 +155,32 @@ E também, com a melhora de segurança das redes, surgiram pessoas interessadas 
 
 \section{Wardriving}
 
-%Jonatas%
+Ao contrário do que se acredita, Wardriving não é uma técnica ilegal ou invasiva, visto que não são obtidas informações que estão encapsuladas na mensagem trocada entre dispositivos sem autorização das partes afetadas, ou seja, não existe quebra de sigilo. Existindo muitas formas de executar os testes, muitas vezes são utilizadas ferramentas que são comuns aos hackers para invasão de redes, e por esse motivo os conceitos são associados de forma errônea.\\
+
+A definição básica de wardriving consiste no testador mover-se em uma área específica, mapeando a população de pontos de acesso sem fio existentes. Os resultados obtidos são utilizados para levantar vulnerabilidades existentes por meio das informações que os equipamentos dispõem, como se é utilizado criptografia (e de qual tipo). Sendo uma prática relativamente simples, pode ser realizada por hobistas ou profissionais que futuramente utilizarão as informações obtidas para conduzir testes de penetração, por exemplo.\\
+
+Também é relevante mencionar que com a crescente preocupação em segurança de informação como forma de prevenir incidentes, a procura por profissionais capacitados a identificar e analisar vulnerabilidades também aumentou exponencialmente.
 
 \section{Protocolas de segurança em redes sem fio}
+
+Primeiramente, é necessário compreender o funcionamento básico das formas mais comuns de proteger redes sem fio, bem como seu posicionamento no contexto tecnológico atual. A maioria dos roteadores modernos possuem recursos para configuração fácil pelo próprio usuário, e a mais antiga que foi padrão de mercado por bastante tempo é a chamada WEP.\\
+
+Esse modelo foi adotado como padrão de segurança em setembro de 1999 e desde então tem sido o protocolo mais difundido para redes sem fio, e em sua forma mais comum tratava-se de uma implementação com chave de 128 bits para encriptação dos dados. A partir de 2001, uma série de exploits foram criados aproveitando inúmeras vulnerabilidades que tecnologia possui, e mesmo sendo melhor do que manter uma rede sem proteção alguma, não é recomendado atualmente.\\
+
+Como prova disso, o FBI (US Federal Bureau of Investigation) forneceu em 2005 uma demonstração pública onde foi realizada a quebra de segurança em pouco minutos, utilizando uma ferramenta gratuita.\\
+
+Posteriormente, surgiram novos padrões como WPA (Wi-Fi Protected Access) em 2003 utilizando chave PSK e de 256 bits e WPA2 em 2006 com uma série de melhorias como o uso mandatório de algoritmos AES. Atualmente, aparelhos mais completos no mercado permitem a combinação de algumas tecnologias de autenticação e métodos de criptografia para sanar algumas vulnerabilidades ainda existentes. É possível verificar abaixo uma relação com as tecnologias mais seguras disponíveis para o público geral em ordem decrescente:\\
+
+\begin{enumerate}
+\item{WPA + AES}
+\item{WPA + AES}
+\item{WPA + TKIP/AES (TKIP atua como método de contingência)}
+\item{WPA + TKIP}
+\item{WEP}
+\item{Rede aberta (sem protocolo de segurança)}
+\end{enumerate}
+
+Os critérios acima serão utilizados como referência para estudo do ambiente selecionado, cujo índice de vulnerabilidade poderá variar de acordo com outras condições como existência de logins, autenticação de 2 fatores, redes ocultas, entre outros.\\
 
 \section{Análise de vulnerabilidade e tentativa de quebra de senhas}
 
@@ -229,25 +253,28 @@ Indo além, uma pessoa mal intencionada poderia também capturar informações d
 \section*{Considerações finais}
 \addcontentsline{toc}{section}{Considerações finais}
 
-Conclusão
+Vimos que mesmo hoje em dia, existem redes sem fio comerciais(estabelecimentos etc), que utilizam protocolos de segurança fracos, uma indicação é procurar configurar no roteador um protocolo de segurança, e para grandes ambientes, criptografar as requisições, ou seja, tudo que entra e sai da rede.
 
 % Elementos pós textuais
 \postextual
 
 % Titulo e resumo em outro idioma
-\titulo{Symmetrical DES Criptography}
+\titulo{Vulnerability Analysis of Commercial Wireless Networks}
 \emptythanks
 \maketitle
 
 \renewcommand{\resumoname}{Abstract}
 \begin{resumoumacoluna}
  \begin{otherlanguage*}{english}
-   Abstract
+
+With the growing-up demand of mobile devices, as smartphones, tablets and laptops, the use of wireless networks became highly present in our routine. Whether it’s in corporative or domestic environments, the popularization happened also due facility and freedom wireless networks provide, and recently, invaded another devices due Internet of Things (IoT) phenomena such as home appliances, cars and clothes.\\
+
+However, most of these networks aren’t properly protected, turning them into “entry doors” for hackers hijacking information from users or sabotage systems which will cause massive losses.
 
    \vspace{\onelineskip}
 
-   \noindent
-   \textbf{Keywords}: Wardriving. Information Security.
+ \noindent
+ \textbf{Keywords}: Wardriving. Information Security.
  \end{otherlanguage*}
 \end{resumoumacoluna}
 
