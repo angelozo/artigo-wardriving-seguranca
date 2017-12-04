@@ -24,6 +24,7 @@
 \usepackage[T1]{fontenc}		% Selecao de codigos de fonte.
 \usepackage[utf8]{inputenc}		% Codificacao do documento (conversão automática dos acentos)
 \usepackage{indentfirst}		% Indenta o primeiro parágrafo de cada seção.
+\usepackage{float}
 \usepackage{nomencl} 			% Lista de simbolos
 \usepackage{color}				% Controle das cores
 \usepackage{graphicx}			% Inclusão de gráficos
@@ -191,11 +192,17 @@ Conseguimos capturar através do Kismet 37 redes sem fio válidas (com conexão)
 
 Como podemos ver acima, a maior parte das redes wifi privadas utilizam a criptografia de rede WPA2-PSK, porém ainda temos redes que utizam protocolo WEP, que é muito inseguro e fácil de ser quebrado.
 
-
-
-
-
 \subsubsection{Cracking de senhas}
+
+Após feita a captura dos pacotes, capturamos os handshakes utilizando o comando aireplay-ng do pacote aircrack.\\
+
+\subsubsubsection{WPA-PSK}
+
+Para redes WPA-PSK, utilizamos um arquivo word-list contendo 1.2 bilhão de senhas mais utilizadas em redes sem fio, utilizando o aircrack-ng.\\
+
+Das redes WPA-PSK analisadas, nenhuma foi quebrada, mesmo após utilizar toda a lista.
+
+\subsubsubsection{WEP}
 
 \subsubsection{Sniffing}
 
