@@ -145,8 +145,10 @@ Angelo Rodrigo Ribeiro da Silva\thanks{angelorodriigo.rs@gmail.com} Jaíne da Si
 % Introdução
 \section*{Introdução}
 \addcontentsline{toc}{section}{Introdução}
+\nocite{varredura-ibirama}
+\nocite{analise-vulnerabilidade}
 
-Segundo \cite[p. 67]{redes-tanenbaum} "Quase na mesma época em que surgir am os notebooks, muitas pessoas sonhavam com o dia em que entrariam em um escritório e magicamente seu notebook se conectaria à Internet.", e logicamente, veio logo após a necessidade de proteger essas redes através de criptografia e outras técnicas de segurança.
+Segundo \cite[p. 67]{redes-tanenbaum} "Quase na mesma época em que surgir am os notebooks, muitas pessoas sonhavam com o dia em que entrariam em um escritório e magicamente seu notebook se conectaria à Internet.", e logicamente, veio logo após a necessidade de proteger essas redes através de criptografia e outras técnicas de segurança.\\
 
 E também, com a melhora de segurança das redes, surgiram pessoas interessadas em quebrar essas redes, seja por interesse financeiro, corporativo ou mesmo pelo triunfo de se atingir um objetivo utilizando técnicas de quebra, prática muito comum nas comunidades de hackers.
 
@@ -200,11 +202,25 @@ Após feita a captura dos pacotes, capturamos os handshakes utilizando o comando
 
 Para redes WPA-PSK, utilizamos um arquivo word-list contendo 1.2 bilhão de senhas mais utilizadas em redes sem fio, utilizando o aircrack-ng.\\
 
-Das redes WPA-PSK analisadas, nenhuma foi quebrada, mesmo após utilizar toda a lista.
+Das redes WPA-PSK analisadas, nenhuma foi quebrada, mesmo após utilizar toda a lista.\\
 
 \subsubsubsection{WEP}
 
+Já as duas redes WEP foram quebradas em pouco tempo utilizando o aircrack-ng com a flag 1 ativada, que decripta handshakes de redes WEP.
+
 \subsubsection{Sniffing}
+
+Nas redes abertas, foram feitas tentativas de sniffing nos pacotes que estavam sendo transmitidos utilizando wireshark.
+
+\begin{figure}[H]
+	\centering
+	\caption{Sniffing de rede sem fio utilizando wireshark.}
+	\includegraphics[scale=0.32]{captura-wireshark-1}
+\end{figure}
+
+Na figura acima, vemos em destaque uma requisição do tipo GET capturada que foi feita por nós, vemos aqui que as requisições não são criptografadas pelo roteador.\\
+
+Indo além, uma pessoa mal intencionada poderia também capturar informações de uma requisição do tipo POST, para posteriormente descriptografar as informações passadas pelos headers.\\
 
 % Finaliza a parte no bookmark do PDF, para que se inicie o bookmark na raiz
 \bookmarksetup{startatroot}
@@ -219,7 +235,6 @@ Conclusão
 \postextual
 
 % Titulo e resumo em outro idioma
-
 \titulo{Symmetrical DES Criptography}
 \emptythanks
 \maketitle
